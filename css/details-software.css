@@ -1,0 +1,262 @@
+:root {
+    --primary: black;
+    --second: white;
+    --third: rgb(0, 4, 255);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    gap: 5%;
+    place-content: center;
+    place-items: center;
+    position: sticky;
+    padding: 1rem 0;
+    top: 0;
+    background-color: var(--second);
+    border-bottom: .1rem solid var(--primary);
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h1 {
+    margin: 0;
+    width: fit-content;
+}
+
+.title hr {
+    width: 35%;
+    border: 1px solid var(--primary);
+    margin: 0;
+}
+
+.search-box {
+    display: flex;
+    border: .1rem solid var(--primary);
+    border-radius: 1rem;
+    padding: .1rem 0rem;
+    gap: .2rem;
+    place-items: center;
+    width: 23%;
+}
+
+.search {
+    background-color: transparent;
+    border: none;
+    padding: 0 .4rem;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.search-box i {
+    font-size: .9rem;
+    padding-right: .3rem;
+}
+
+.menu {
+    display: flex;
+    font-size: .9rem;
+    place-items: center;
+    gap: 2rem;
+    width: max-content;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.menu p:hover {
+    cursor: pointer;
+    text-shadow: -.2rem .2rem rgba(0, 0, 0, 0.21) ;
+    transform: translate(.2rem, -.2rem);
+}
+
+.active i {
+    font-size: .3rem;
+}
+
+.login {
+    font-size: 1rem;
+    padding: .4rem .9rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+}
+
+.login:hover {
+    box-shadow: .3rem .2rem var(--third);    
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.hero {
+    width: 82%;
+    height: 30vh;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(var(--primary) 60%, var(--second));
+    color: var(--second);
+    padding: 1rem 3rem;
+}
+
+.hero span {
+    color: #B1B6E2;
+}
+
+.search-box-hero {
+    width: 100%;
+    background-color: var(--second);
+    display: flex;
+    border-radius: 1rem;
+    color: var(--primary);
+    padding: .1rem .3rem;
+    place-items: center;
+    place-content: center;
+}
+
+.search-box-hero i {
+    font-size: .8rem;
+    font-weight: normal;
+}
+
+.search-box-hero i:hover {
+    font-size: .85rem;
+}
+
+.body {
+    display: flex;
+    margin: 1.5rem 5rem;
+    gap: 1rem;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 36%;
+    font-size: .9rem;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: .5rem;
+    position: sticky;
+    top: 5.5rem;
+    place-items: center;
+}
+
+.name img {
+    width: 8rem;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 64%;
+    font-size: .7rem;
+    gap: 1rem;
+    border-left: .1rem solid var(--primary);
+    padding-left: 1rem;
+}
+
+.hardware {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 17rem;
+}
+
+.bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bar div {
+    display: flex;
+    place-items: center;
+}
+
+.bar input {
+    height: 1rem;
+    border-radius: 1rem;
+    border: .1rem solid var(--primary);
+    color: var(--primary);
+    padding: 0 .2rem;
+}
+
+.catagories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box {
+    display: flex;
+    gap: 1rem;
+}
+
+.box.motherboard {
+    display: inline;
+    position: relative;
+    top: 18px;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox {
+    display: flex;
+    place-items: center;
+}
+
+.checkbox p {
+    margin: 0.1rem 0;
+}
+
+footer {
+    background-color: var(--primary);
+    color: var(--second);
+    text-align: right;
+    padding: 0rem 1rem;
+    font-size: .8rem;
+}
+
+footer p{
+    margin: .2rem 0;
+}
+
+footer a {
+    margin: 0;
+    text-decoration: none;
+    color: orange;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-size: 1rem;
+}

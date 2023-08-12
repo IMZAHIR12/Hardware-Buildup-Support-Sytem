@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/94bda38f84.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/details-software.css">
+    <?php ?>
+    <title>Hardware Buildup Support System</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                <h1>Hardware Manager</h1>
+                <hr></hr>
+            </div>
+            <div class="search-box">
+                <input type="search" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="menu">
+                <p><a href="./index.html">Home</a></p>
+                <p>Software</p>
+                <p>Games</p>
+                <p>Q/A</p>
+            </div>
+            <input type="button" class="login" value="Login">
+        </nav>
+        <div class="hero">
+            <h2>Which <span>Software</span> do you want to run?</h2>
+            <div class="search-box-hero">
+                <input type="search" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="body">
+            <div class="left">
+                <div class="name">
+                    <img src="./images/photoshop.png" alt="photoshop_icon">
+                    <h1>Adobe Photoshop></h1>
+                </div>
+                <div class="filter">
+                    <div class="bar">
+                        <p>Price range:</p>
+                        <div>
+                            <input type="range" name="price-range" id="price-range" value="Price">
+                            <input type="number" name="price" id="price">
+                        </div>
+                    </div>
+                    <div class="catagories">
+                        <p>CPU:</p>
+                        <div class="box">
+                            <div class="checkbox">
+                                <input type="checkbox" name="AMD" id="amd">
+                                <p>AMD</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="Intel" id="intel">
+                                <p>Intel</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catagories">
+                        <p>Ram:</p>
+                        <div class="box">
+                            <div class="checkbox">
+                                <input type="checkbox" name="2GB" id="2gb">
+                                <p>2GB</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="4GB" id="4gb">
+                                <p>4GB</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="8GB" id="8gb">
+                                <p>8GB</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="16GB" id="16gb">
+                                <p>16GB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catagories">
+                        <p>Motherboard:</p>
+                        <div class="box motherboard">
+                            <div class="checkbox">
+                                <input type="checkbox" name="B450M" id="B450M">
+                                <p>B450M</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="A520" id="A520">
+                                <p>A520</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="B650M" id="B650M">
+                                <p>B650M</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="H410M" id="H410M">
+                                <p>H410M</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catagories">
+                        <p>GPU:</p>
+                        <div class="box">
+                            <div class="checkbox">
+                                <input type="checkbox" name="Radeon" id="Radeon">
+                                <p>Radeon</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="GeForce" id="GeForce">
+                                <p>GeForce</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="hardware">
+                    <h1>CPU:</h1>
+                </div>
+                <div class="hardware">
+                    <h1>Ram:</h1>
+                </div>
+                <div class="hardware">
+                    <h1>Motherboard:</h1>
+                </div>
+                <div class="hardware">
+                    <h1>GPU:</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>© Created by <a href="#">Zahir</a></p>
+    </footer>
+</body>
+<?php mysqli_close($connection); ?>
+</html>
