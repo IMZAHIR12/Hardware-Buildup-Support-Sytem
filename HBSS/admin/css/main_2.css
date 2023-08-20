@@ -1,0 +1,389 @@
+:root {
+  --primary: black;
+  --second: white;
+  --third: rgb(0, 4, 255);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  gap: 5%;
+  place-content: center;
+  place-items: center;
+  position: sticky;
+  padding: 1rem 0;
+  top: 0;
+  background-color: var(--second);
+  border-bottom: .1rem solid var(--primary);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+}
+
+.title h1 {
+  margin: 0;
+  width: fit-content;
+}
+
+.title hr {
+  width: 35%;
+  border: 1px solid var(--primary);
+  margin: 0;
+}
+
+.search-box {
+  display: flex;
+  border: .1rem solid var(--primary);
+  border-radius: 1rem;
+  padding: .1rem 0rem;
+  gap: .2rem;
+  place-items: center;
+  width: 23%;
+}
+
+.search {
+  background-color: transparent;
+  border: none;
+  padding: 0 .4rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.search-box i {
+  font-size: .9rem;
+  padding-right: .3rem;
+}
+
+.menu {
+  display: flex;
+  font-size: .9rem;
+  place-items: center;
+  gap: 2rem;
+  width: max-content;
+}
+
+.menu a{
+  text-decoration: none;
+  color:var(--primary)
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active h2 {
+  margin: 0;
+}
+
+.menu p:hover {
+  cursor: pointer;
+  text-shadow: -.2rem .2rem rgba(0, 0, 0, 0.21) ;
+  transform: translate(.2rem, -.2rem);
+}
+
+.active i {
+  font-size: .3rem;
+}
+
+.login {
+  font-size: 1rem;
+  padding: .4rem .9rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  display: flex;
+}
+
+.login:hover {
+  box-shadow: .3rem .2rem var(--third);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.login img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.login p {
+  font-size: 20px;
+}
+
+.hero {
+  width: 82%;
+  height: 30vh;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(var(--primary) 60%, var(--second));
+  color: var(--second);
+  padding: 1rem 3rem;
+}
+
+.hero span {
+  color: #B1B6E2;
+}
+
+.search-box-hero {
+  width: 100%;
+  background-color: var(--second);
+  display: flex;
+  border-radius: 1rem;
+  color: var(--primary);
+  padding: .1rem .3rem;
+  place-items: center;
+  place-content: center;
+}
+
+.search-box-hero i {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.search-box-hero i:hover {
+  font-size: .85rem;
+}
+
+.sw{
+  margin-left: 80px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.softwares{
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.users{
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.soft img{
+
+  width: 207px;
+
+}
+
+.sidenav{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  width:25%;
+  border-right: 1px solid var(--primary);
+
+}
+
+
+.usersnav{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  width:25%;
+  border-right: 1px solid var(--primary);
+
+}
+
+.catname{
+  display: flex;
+  text-decoration: none;
+  color:var(--primary);
+  place-items: center;
+  gap: 3px;
+  margin: 0;
+}
+.catname i{
+  font-size: .3rem;
+}
+
+.catname p{
+  margin: 0;
+  font-weight: bold;
+}
+
+.catname:hover {
+  border: 2px solid transparent; /* Set a transparent solid border initially */
+  border-image: linear-gradient(to right, var(--primary) 60%, var(--second)); /* Use the linear-gradient function */
+  border-image-slice: 1; /* Slice the border image */
+}
+
+
+.usersname{
+  display: flex;
+  text-decoration: none;
+  color:var(--primary);
+  place-items: center;
+  gap: 3px;
+  margin: 0;
+}
+.usersname i{
+  font-size: .3rem;
+}
+
+.usersname p{
+  margin: 0;
+  font-weight: bold;
+}
+
+.usersname:hover {
+  border: 2px solid transparent; /* Set a transparent solid border initially */
+  border-image: linear-gradient(to right, var(--primary) 60%, var(--second)); /* Use the linear-gradient function */
+  border-image-slice: 1; /* Slice the border image */
+}
+
+
+
+
+.softname{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.game img{
+
+  width: 270px;
+
+}
+
+.gamename{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+}
+
+.soft{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
+
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--second);
+  text-align: right;
+  padding: 0rem 1rem;
+  font-size: .8rem;
+}
+
+
+footer p{
+  margin: .2rem 0;
+}
+
+footer a {
+  margin: 0;
+  text-decoration: none;
+  color: orange;
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Monsieur La Doulaise', cursive;
+  font-size: 1rem;
+}
+
+
+
+
+body{margin-top:20px;
+  background-color:#f2f6fc;
+  color:#69707a;
+}
+
+
+.form-control, .dataTable-input {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #69707a;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #c5ccd6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.nav-borders .nav-link.active {
+  color: #0061f2;
+  border-bottom-color: #0061f2;
+}
+.nav-borders .nav-link {
+  color: #69707a;
+  border-bottom-width: 0.125rem;
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+#birthnationality{
+  display: flex;
+  flex-direction: row;
+}
+
+#fullnamegender{
+  display: flex;
+  flex-direction: row;
+}
+
+.form6{
+  padding-bottom: 40px;
+}
+
+#container2{
+  display: flex;
+  flex-direction: column;
+}
+#admin{
+  display: flex;
+  margin-left: 50px;
+}

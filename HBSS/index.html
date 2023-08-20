@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/94bda38f84.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
+
+    <title>Hardware Buildup Support System</title>
+</head>
+
+<body>
+<header>
+    <nav>
+        <div class="title">
+            <h1>Hardware Manager</h1>
+            <hr></hr>
+        </div>
+        <div class="search-box">
+            <input type="search" id="search" class="search" onchange="getSoftwares()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="menu">
+            <p>Home</p>
+            <div class="active">
+                <h2>Software</h2>
+                <i class="fa-solid fa-circle"></i>
+            </div>
+            <p><a href="games.html">Games</a></p>
+            <p>Q/A</p>
+        </div>
+        <a class="login" id="login" href="Login_SignUp.html">Login</a>
+    </nav>
+    <div class="hero">
+        <h2>Which <span>Software</span> do you want to run?</h2>
+        <div class="search-box-hero">
+            <input type="search" class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    <h2 class="sw">Software:</h2>
+    <div class="softwares">
+        <div class="sidenav">
+                <a class="catname" href="#" onclick="fetchData()">
+                    <i class="fa-solid fa-circle"></i>
+                     <p>Adobe</p>
+                </a>
+
+            <a class="catname" href="#">
+                <i class="fa-solid fa-circle"></i>
+                <p>Web Browser</p>
+            </a>
+            <a class="catname" href="#">
+                <i class="fa-solid fa-circle"></i>
+                <p>PDF</p>
+            </a>
+            <a class="catname" href="#">
+                <i class="fa-solid fa-circle"></i>
+                <p>Video Editor</p>
+            </a>
+            <a class="catname" href="#">
+                <i class="fa-solid fa-circle"></i>
+                <p>Photo Editor</p>
+            </a>
+            <a class="catname" href="#">
+                <i class="fa-solid fa-circle"></i>
+                <p>Multimedia</p>
+            </a>
+            <a class="catname" href="#">
+                <i class="fa-solid fa-circle"></i>
+                <p>Microsoft Office</p>
+            </a>
+
+        </div>
+
+
+        <div class="softname" id="softname">
+            <a class="soft" href="#">
+
+                <img src="./images/Adobe%20Photoshop.png"></img>
+                <p id="soft_name">Adobe Photoshop</p>
+            </a>
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+    </header>
+<script src="./javascript/script.js"></script>
+
+</body>
+</html>

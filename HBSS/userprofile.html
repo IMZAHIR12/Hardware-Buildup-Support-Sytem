@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/94bda38f84.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="./javascript/user.js"></script>
+
+  <title>Hardware Buildup Support System</title>
+</head>
+<body>
+
+
+  <header>
+  <nav>
+    <div class="title">
+      <h1>Hardware Manager</h1>
+      <hr></hr>
+    </div>
+    <div class="search-box">
+      <input type="search" id="search" class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="menu">
+      <p>Home</p>
+
+        <p><a href="index.html">Software</a></p>
+
+      <p><a href="games.html">Games</a></p>
+      <p>Q/A</p>
+    </div>
+    <input type="button" class="login" id="login" >
+
+  </nav>
+
+
+   <div class="usersname1" id="usersname1">
+     <a class="user2" href="#">
+
+       <img src="./images/Profile.png"></img>
+       <p id="users_name">Sophia Williams</p>
+     </a>
+
+
+         <div class="users">
+           <div class="usersnav">
+             <a class="usersname" href="#">
+               <i class="fa fa-user" id="profile" style="font-size: 15px"></i>
+               <p>Profile</p>
+             </a>
+
+             <a class="usersname" href="#">
+               <i class="fa fa-bell" style="font-size: 15px"></i>
+               <p>Notification</p>
+             </a>
+             <a class="usersname" href="#">
+               <i class="fa fa-shield" style="font-size:15px"></i>
+               <p>Security</p>
+             </a>
+             <a class="usersname" href="#">
+               <i class="fa-solid fa-edit" style="font-size: 15px"></i>
+               <p>Appearence</p>
+             </a>
+             <a class="usersname" href="#">
+               <i class="fa fa-question-circle" style="font-size: 15px"></i>
+               <p>Help</p>
+             </a>
+               </div>
+
+
+                   <form class="form6">
+
+                     <div class="mb-3">
+                       <label class="small mb-1" >Username</label>
+                       <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username">
+                     </div>
+                     <!-- Form Row-->
+                     <div class="row gx-3 mb-3" id="fullnamegender">
+                       <!-- Form Group (first name)-->
+                       <div class="col-md-6">
+                         <label class="small mb-1">Full name</label>
+                         <input class="form-control" id="inputfullname" type="text" placeholder="Enter your full name" >
+                       </div>
+                       <!-- Form Group (last name)-->
+                       <div class="col-md-6">
+                         <label class="small mb-1">Gender</label>
+                         <input class="form-control" id="inputgender" type="text" placeholder="Enter your gender" >
+                       </div>
+                     </div>
+                     <!-- Form Row        -->
+                     <div class="row gx-3 mb-3" id="birthnationality">
+                       <!-- Form Group (organization name)-->
+                       <div class="col-md-6" id="birthdate">
+                         <label class="small mb-1">Birthdate</label>
+                         <input class="form-control" id="inputbirth" type="text" placeholder="Enter your birthdate" >
+                       </div>
+                       <!-- Form Group (location)-->
+                       <div class="col-md-6">
+                         <label class="small mb-1">Nationality</label>
+                         <input class="form-control" id="inputnation" type="text" placeholder="Enter your nationality" >
+                       </div>
+                     </div>
+                     <!-- Form Group (email address)-->
+                     <div class="mb-3">
+                       <label class="small mb-1">Email address</label>
+                       <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" >
+                     </div>
+
+                     <div class="mb-3">
+                       <label class="small mb-1">Jobtitle</label>
+                       <input class="form-control" id="inputjobtitle" type="jobtitle" placeholder="Enter your jobtitle" >
+                     </div>
+                     <!-- Form Row-->
+                     <!-- Save changes button-->
+                     <input class="btn btn-primary" type="submit" id="submit" value="Submit">
+                   </form>
+
+                <div id="userDetails"></div>
+
+
+
+
+
+
+         </div>
+
+
+
+
+
+     </div>
+   </div>
+  </header>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#submit').click(function() {
+        $.ajax({
+          url: 'Userdetails2.php', // PHP script to fetch user details
+          method: 'GET',
+          dataType: 'json',
+          success: function(data) {
+            if (data) {
+              $('#userDetails').html(data);
+            }
+          },
+          error: function(error) {
+            console.error('Error fetching user details:', error);
+          }
+        });
+      });
+    });
+  </script>
+
+
+
+
+
+ </body>
+</html>
