@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+
+  <link href="./Login.css" rel="stylesheet"/>
+  <link href="./main.css" rel="stylesheet"/>
+
+
+    <meta charset="UTF-8">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+   <header>
+
+       <div class="title2">
+         <h2>Hardware Manager</h2>
+           <hr></hr>
+       </div>
+
+   </header>
+   <div class="container">
+       <input type="checkbox" id="flip">
+       <div class="cover">
+           <div class="front">
+               <img src="images/login.png" alt="">
+           </div>
+
+       </div>
+       <div class="forms">
+           <div class="form-content">
+               <div class="login-form" id="login-form">
+                   <div class="title">Sign in</div>
+                   <form id="loginForm" action="php/login.php" method="POST">
+                       <div class="input-boxes">
+                           <div class="input-box">
+                               <i class="fas fa-envelope"></i>
+                               <input type="text" id="login-username" placeholder="Enter your email" required>
+                           </div>
+                           <div class="input-box">
+                               <i class="fas fa-lock"></i>
+                               <input type="password"  id="login-password" placeholder="Enter your password" required>
+                           </div>
+
+                           <div class="form-check d-flex justify-content-start mb-4">
+                               <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                               <label class="form-check-label" for="form1Example3" style="font-size: 15px"> Remember password </label>
+                           </div>
+                           <div class="text"><a href="#">Forgot password?</a></div>
+                           <div id="error">
+                           </div>
+                           <div class="button input-box">
+                               <input type="submit" value="Log in" id="login">
+                           </div>
+                           <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+                           <div class="social-container">
+                               <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                               <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                               <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                           </div>
+
+
+                       </div>
+                   </form>
+                   <div id="response">
+                   </div>
+               </div>
+               <div class="signup-form" id="signup-form">
+                   <div class="title">Signup</div>
+                   <form action="#">
+                       <div class="input-boxes">
+                           <div class="input-box" >
+                               <i class="fas fa-user"></i>
+                               <input type="text" id="signup-username" placeholder="Enter your name" required>
+                           </div>
+                           <div class="input-box" >
+                               <i class="fas fa-envelope"></i>
+                               <input type="text" id="signup-email" placeholder="Enter your email" required>
+                           </div>
+                           <div class="input-box" >
+                               <i class="fas fa-lock"></i>
+                               <input type="password" id="signup-password" placeholder="Enter your password" required>
+                           </div>
+                           <div class="input-box">
+                               <i class="fas fa-lock"></i>
+                               <input type="password" id="signup-confirmpass" placeholder="Confirm your password" required>
+                           </div>
+                           <div class="button input-box">
+                               <input type="submit" value="Sign Up">
+                           </div>
+                           <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+   </div>
+
+
+   <script>
+       // Handle form submission with JavaScript
+       document.getElementById("loginForm").addEventListener("submit", function(event) {
+           event.preventDefault(); // Prevent the form from submitting normally
+       const user = [];
+       const email=document.getElementById("login-username").value;
+       const password=document.getElementById("login-password").value;
+
+       user.push(email);
+       user.push(password);
+
+       const str=`email=${email}&password=${password}`;
+
+           const xhr = new XMLHttpRequest();
+
+           // Configure the AJAX request (POST method and PHP file to handle the request)
+           xhr.open('POST', './php/login.php', true);
+           xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+           // Define what to do when the AJAX request completes
+           xhr.onreadystatechange = function () {
+               if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                   console.log(xhr.responseText);
+                   // Display the result returned from the PHP script
+                   const result1 = JSON.parse(xhr.responseText);
+                   if(result1=='Login failed!') {
+                       document.getElementById("error").innerHTML='email or password is invalid!'
+                   }
+                   else {
+                       result1.forEach(user => {
+                           window.location.href = `index.html?userid=${user.users_id}`;
+                       });
+                   }
+               }
+
+           }
+
+           // Send the input value to the PHP script
+           xhr.send(str);
+
+       });
+   </script>
+
+
+
+
+
+
+
+</body>
+</html>

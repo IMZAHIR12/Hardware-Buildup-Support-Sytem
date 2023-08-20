@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/94bda38f84.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
+
+  <title>Hardware Buildup Support System</title>
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="title">
+      <h1>Hardware Manager</h1>
+      <hr></hr>
+    </div>
+    <div class="search-box">
+      <input type="search" class="search" id="search" onchange="getGames()">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div class="menu">
+      <p>Home</p>
+      <p><a href="./index.html">Software</a></p>
+      <div class="active">
+        <h2>Games</h2>
+        <i class="fa-solid fa-circle"></i>
+      </div>
+      <p>Q/A</p>
+    </div>
+    <input type="button" class="login" value="Login">
+  </nav>
+  <div class="hero">
+    <h2>Which <span>games</span> do you want to run?</h2>
+    <div class="search-box-hero">
+      <input type="search" class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+  <h2 class="sw">Games:</h2>
+  <div class="softwares">
+    <div class="sidenav">
+      <a class="catname" href="#">
+        <i class="fa-solid fa-circle"></i>
+        <p>All</p>
+      </a>
+
+      <a class="catname" href="#">
+        <i class="fa-solid fa-circle"></i>
+        <p>Action</p>
+      </a>
+      <a class="catname" href="#">
+        <i class="fa-solid fa-circle"></i>
+        <p>Adventure</p>
+      </a>
+      <a class="catname" href="#">
+        <i class="fa-solid fa-circle"></i>
+        <p>Sports</p>
+      </a>
+      <a class="catname" href="#">
+        <i class="fa-solid fa-circle"></i>
+        <p>Racing</p>
+      </a>
+      <a class="catname" href="#">
+        <i class="fa-solid fa-circle"></i>
+        <p>Fighting</p>
+      </a>
+      <a class="catname" href="#">
+        <i class="fa-solid fa-circle"></i>
+        <p>Casual</p>
+      </a>
+
+    </div>
+
+
+    <div class="gamename" id="gamename">
+      <a class="game" href="#">
+
+        <img src="./images/gtav.png"></img>
+        <p>GTA V</p>
+      </a>
+
+
+    </div>
+
+
+
+
+  </div>
+</header>
+
+<script src="./javascript/script2.js"></script>
+</body>
+</html>
