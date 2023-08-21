@@ -38,7 +38,11 @@ nav {
 
 .title h1 {
     margin: 0;
+<<<<<<< HEAD
     min-width: max-content;
+=======
+    width: fit-content;
+>>>>>>> version-1
 }
 
 .title hr {
@@ -78,11 +82,14 @@ nav {
     width: max-content;
 }
 
+<<<<<<< HEAD
 .menu a {
     text-decoration: none;
     color: var(--primary);
 }
 
+=======
+>>>>>>> version-1
 .active {
     display: flex;
     flex-direction: column;
@@ -104,16 +111,22 @@ nav {
 }
 
 .login {
+<<<<<<< HEAD
     text-decoration: none;
+=======
+>>>>>>> version-1
     font-size: 1rem;
     padding: .4rem .9rem;
     border-radius: 1rem;
     border: none;
     background-color: var(--primary);
     color: white;
+<<<<<<< HEAD
     display: flex;
     place-items: center;
     gap: .3rem;
+=======
+>>>>>>> version-1
 }
 
 .login:hover {
@@ -122,6 +135,7 @@ nav {
     transform: scale(1.05);
 }
 
+<<<<<<< HEAD
 .login img {
     height: 1.5rem;
 }
@@ -218,6 +232,8 @@ nav {
     flex-direction: column;
 }
 
+=======
+>>>>>>> version-1
 .hero {
     width: 82%;
     height: 30vh;
@@ -233,13 +249,17 @@ nav {
     color: #B1B6E2;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> version-1
 .search-box-hero {
     width: 100%;
     background-color: var(--second);
     display: flex;
     border-radius: 1rem;
     color: var(--primary);
+<<<<<<< HEAD
     padding: .1rem auto;
     place-items: end;
     place-content: center;
@@ -256,12 +276,20 @@ nav {
     border-radius: .3rem;
     min-height: 3rem;
     max-height: 5rem;
+=======
+    padding: .1rem .3rem;
+    place-items: center;
+    place-content: center;
+>>>>>>> version-1
 }
 
 .search-box-hero i {
     font-size: .8rem;
     font-weight: normal;
+<<<<<<< HEAD
     margin-bottom: .3rem;
+=======
+>>>>>>> version-1
 }
 
 .search-box-hero i:hover {
@@ -308,6 +336,7 @@ nav {
     border-image-slice: 1; /* Slice the border image */
 }
 
+<<<<<<< HEAD
 .posts {
     display: flex;
     flex-direction: column;
@@ -491,6 +520,8 @@ nav {
     height: auto;
 }
 
+=======
+>>>>>>> version-1
 footer {
     background-color: var(--primary);
     color: var(--second);
