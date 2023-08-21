@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Hardware Buildup Support System</title>
 </head>
 
@@ -22,28 +23,19 @@
                 </hr>
             </div>
             <div class="search-box">
-                <input type="search" class="search">
+                <input type="search" id="search" class="search" onchange="getSoftwares()">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="menu">
+                <p><a href="./index.html">Home</a></p>
                 <div class="active">
-                    <h2>Home</h2>
+                    <h2>Software</h2>
                     <i class="fa-solid fa-circle"></i>
                 </div>
-                <p><a href="software.html">Software</a></p>
-                <p>Games</p>
+                <p><a href="games.html">Games</a></p>
                 <p><a href="q-a.html">Q/A</a></p>
             </div>
-            <!-- <a class="login" id="login" value="Login" href="./login_signup.html">Login</a> -->
-            <div class="dropdown" id="dropdown">
-                <!-- <a class="login dropbtn" id="login" value="Login" href="./login_signup.html">
-                    <img src="./images/user-image/emily_johnson.png" alt="emily_johnson">
-                    <h2>Emily Johnson</h2>
-                </a>
-                <div class="dropdown-content">
-                    <a href="#" onclick="deleteCookie()">Logout</a>
-                </div> -->
-            </div>
+            <div class="dropdown" id="dropdown"></div>
         </nav>
         <div class="hero">
             <h2>Which <span>Software</span> do you want to run?</h2>
@@ -52,25 +44,20 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
-        <div class="top-items">
-            <div class="top">
-                <h2>Software:</h2>
-                <div class="lists" id="lists1">
-                </div>
+        <h2 class="sw">Software:</h2>
+        <div class="softwares">
+            <div class="sidenav">
+                <a class="catname" href="#" onclick="fetchData()">
+                    <i class="fa-solid fa-circle"></i>
+                    <p>Adobe</p>
+                </a>
             </div>
-            <div class="top">
-                <h2>Games:</h2>
-                <div class="lists" id="lists2">
-                    <div class="name">
-                    </div>
-                </div>
+            <div class="softname" id="softname">
+                <p>No software found!</p>
             </div>
         </div>
     </header>
-    <footer>
-        <p>© Created by <a href="#">Zahir</a></p>
-    </footer>
     <script src="./js/cookies.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script-soft.js"></script>
 </body>
 </html>

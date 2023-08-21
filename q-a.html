@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/94bda38f84.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Hardware Buildup Support System</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="title">
+                <h1>Hardware Manager</h1>
+                <hr>
+                </hr>
+            </div>
+            <div class="search-box">
+                <input type="search" class="search" placeholder="Search Questions Here...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="menu">
+                <p><a href="./index.html">Home</a></p>
+                <p><a href="software.html">Software</a></p>
+                <p><a href="games.html">Games</a></p>
+                <div class="active">
+                    <h2>Q/A</h2>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+            </div>
+            <div class="dropdown" id="dropdown"></div>
+        </nav>
+        <div class="hero">
+            <h2>Ask a <span>Question</span></h2>
+            <div class="search-box-hero">
+                <textarea id="ask" class="ask" placeholder="Ask Question Here..."></textarea>
+                <i class="fa-solid fa-magnifying-glass" id="createPost"></i>
+            </div>
+        </div>
+        <div class="posts" id="posts">
+            <div class="post">
+                <div class="head">
+                    <div class="userInfo">
+                        <img src="images/user-image/emily_johnson.png" alt="userimage" class="userImage">
+                        <div class="user">
+                            <h2 class="userName">Emily Johnson</h2>
+                            <p class="time">11:23 PM Sun 23 Jul</p>
+                        </div>
+                    </div>
+                    <div class="menuBar">
+                        <a href="#answer"><i class="fa-solid fa-reply fa-rotate-180"></i> 23 Replies</a>
+                        <i class="fa-solid fa-share-from-square"></i>
+                        <div class="dropdownQ">
+                            <i class="fa-solid fa-chevron-down dropbtn"></i>
+                            <div class="dropdown-items">
+                                <a href="#">Edit</a>
+                                <a href="#">Delete</a>
+                                <a href="#">Report</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body">
+                    <p>I'm looking to run video editing software smoothly. Can anyone recommend the ideal computer specs for seamless performance?</p>
+                </div>
+                <div class="showAnswer">
+                    <p id="clickAnswer">See Answers</p>
+                    <table class="answer" id="answer">
+                        <tr class="reply">
+                            <td class="replyUserInfo">
+                                <img src="images/user-image/benjamin_williams.png" alt="userimage" class="userImage">
+                                <h2>Benjamin Williams</h2>
+                            </td>
+                            <td class="replyMessege">
+                                <p class="replyBody">
+                                    For smooth video editing, I'd recommend a computer with at least an Intel Core i7 or AMD Ryzen 
+                                    7 processor, 16GB of RAM, and a dedicated graphics card like an NVIDIA GeForce GTX 1660 Ti or higher.
+                                    Make sure you have a fast SSD for your storage and ample space. These specs should provide a seamless 
+                                    editing experience for most video projects.
+                                </p>
+                                <p class="replyTime">2023-08-12 16:12:19</p>
+                            </td>
+                        </tr>
+                        <tr class="reply">
+                            <td class="replyUserInfo">
+                                <img src="images/user-image/benjamin_williams.png" alt="userimage" class="userImage">
+                                <h2>Benjamin Williams</h2>
+                            </td>
+                            <td class="replyMessege">
+                                <p class="replyBody">
+                                    For smooth video editing, I'd recommend a computer with at least an Intel Core i7 or AMD Ryzen 
+                                    7 processor, 16GB of RAM, and a dedicated graphics card like an NVIDIA GeForce GTX 1660 Ti or higher.
+                                    Make sure you have a fast SSD for your storage and ample space. These specs should provide a seamless 
+                                    editing experience for most video projects.
+                                </p>
+                                <p class="replyTime">2023-08-12 16:12:19</p>
+                            </td>
+                        </tr>
+                        <tr class="user-reply">
+                            <td class="replyUserInfo">
+                                <img src="images/user-image/benjamin_williams.png" alt="userimage" class="userImage">
+                                <h2>Benjamin Williams</h2>
+                            </td>
+                            <td class="user-replyMessege">
+                                <textarea name="replybody" id="replyBody" placeholder="Type your answer here..."></textarea>
+                                <input type="button" value="Send">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </header>
+    <footer>
+        <p>© Created by <a href="#">Zahir</a></p>
+    </footer>
+    <script src="./js/cookies.js"></script>
+    <!-- <script src="./js/script_question.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+.sw{
+  margin-left: 80px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.softwares{
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.soft img{
+
+  width: 207px;
+
+}
+
+.sidenav{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  width:25%;
+  border-right: 1px solid var(--primary);
+
+}
+
+.catname{
+  display: flex;
+  text-decoration: none;
+  color:var(--primary);
+  place-items: center;
+  gap: 3px;
+  margin: 0;
+}
+.catname i{
+  font-size: .3rem;
+}
+
+.catname p{
+  margin: 0;
+  font-weight: bold;
+}
+
+.catname:hover {
+  border: 2px solid transparent; /* Set a transparent solid border initially */
+  border-image: linear-gradient(to right, var(--primary) 60%, var(--second)); /* Use the linear-gradient function */
+  border-image-slice: 1; /* Slice the border image */
+}
+
+.softname{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.game img{
+
+  width: 270px;
+
+}
+
+.gamename{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+}
+
+.soft{
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--primary);
+
+}
