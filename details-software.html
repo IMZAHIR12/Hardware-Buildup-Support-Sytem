@@ -11,8 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="stylesheet" type="text/css" href="./css/details-software.css">
-    <script src="./js/cookies.js"></script>
-    <script src="./js/script2.js"></script>
     <title>Hardware Buildup Support System</title>
 </head>
 
@@ -25,7 +23,7 @@
                 </hr>
             </div>
             <div class="search-box">
-                <input type="search" class="search">
+                <input type="search" id="search" class="search" placeholder="Search here...">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="menu">
@@ -39,7 +37,7 @@
         <div class="hero">
             <h2>Which <span>Software</span> do you want to run?</h2>
             <div class="search-box-hero">
-                <input type="search" class="search">
+                <input type="search" id="hero-search" class="search" placeholder="Search here...">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
         </div>
@@ -48,13 +46,13 @@
                 <div class="name" id="name">
                     <img src="./images/software-image/Adobe Photoshop.png" alt="photoshop_icon">
                     <h1>Adobe Photoshop</h1>
-                    <div class="budget" id="budget">
+                    <a href="#" class="budget" id="budget" onclick="getBudget()">
                         <p>Create Your Budget PC</p>
-                    </div>
+                    </a>
                 </div>
-                
+
                 <div class="filter">
-                    <div class="bar" id="price-range" onclick="getBudget()"></div>
+                    <div class="bar" id="price-range"></div>
                     <div class="catagories" id="catagories-cpu">
                         <p>CPU:</p>
                         <div class="box">
@@ -71,38 +69,14 @@
                                 <input type="checkbox" name="2GB" id="2gb">
                                 <p>2GB</p>
                             </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="4GB" id="4gb">
-                                <p>4GB</p>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="8GB" id="8gb">
-                                <p>8GB</p>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="16GB" id="16gb">
-                                <p>16GB</p>
-                            </div>
                         </div>
                     </div>
-                    <div class="catagories" id="catagories-gpu">
+                    <div class="catagories" id="catagories-motherboard">
                         <p>Motherboard:</p>
                         <div class="box motherboard">
                             <div class="checkbox">
                                 <input type="checkbox" name="B450M" id="B450M">
                                 <p>B450M</p>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="A520" id="A520">
-                                <p>A520</p>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="B650M" id="B650M">
-                                <p>B650M</p>
-                            </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="H410M" id="H410M">
-                                <p>H410M</p>
                             </div>
                         </div>
                     </div>
@@ -113,20 +87,24 @@
                                 <input type="checkbox" name="Radeon" id="Radeon">
                                 <p>Radeon</p>
                             </div>
-                            <div class="checkbox">
-                                <input type="checkbox" name="GeForce" id="GeForce">
-                                <p>GeForce</p>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="info">
+            <figure id="loading">
+                <div class="dot white"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </figure>
+            <div class="info" id="info">
+                <h2>Recommanded PC Components</h2>
                 <div class="hardware" id="cpu">
                     <h1>CPU:</h1>
                     <ul>
                         <li>
-                            <p>genon core i5</p>
+                            <p style="font-size: 36px; font-weight: bold;">genon core i5</p>
                             <p>TK 1500</p>
                         </li>
                     </ul>
@@ -147,6 +125,9 @@
     <footer>
         <p>© Created by <a href="#">Zahir</a></p>
     </footer>
+    <script src="./js/cookies.js"></script>
+    <script src="./js/script2.js"></script>
     <script src="./js/budgetPC.js"></script>
 </body>
+
 </html>
