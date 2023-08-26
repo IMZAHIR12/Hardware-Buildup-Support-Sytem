@@ -16,6 +16,8 @@ else
     header("location:login.php");
 }
 include'lib/connection.php';
+$inserted=null;
+$inserted2=null;
 if (isset($_POST['submit']))
 {
     $created_at=$_POST['created_at'];
@@ -43,17 +45,18 @@ if(isset($_GET['remove'])){
     header('location: report.php');
 };
 
-if(isset($_GET['SET blocked'])){
-    $Block_user = $_GET['SET blocked'];
-    mysqli_query($conn, "UPDATE users SET blocked WHERE user_id = '$Block_user'");
-    header('location: report.php');
+if (isset($_GET["users_id"])) {
+    $useridToBlock = $_GET["users_id"];
 
-};
 
-if ($conn->query($query)) {
-    echo "User has been blocked successfully.";
-} else {
-    echo "Error blocking user: " . $conn->error;
+    $sql = "UPDATE users SET user_status = 'blocked' WHERE users_id = '$useridToBlock'";
+    if ($conn->query($sql) === TRUE) {
+        echo "User '$useridToBlock' has been blocked.";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
 }
 
 ob_end_flush();
@@ -87,7 +90,7 @@ ob_end_flush();
                         <td><?php echo $row["document"] ?></td>
                         <td><?php echo $row["created_at"] ?></td>
                         <td><a href="report.php?remove=<?php echo $row['post_id']; ?>">remove</a></td>
-                        <td><a href="report.php?SET blocked=<?php echo $row['post_id']; ?>">Block</a></td>
+                        <td><a href="report.php?users_id=<?php echo $row["users_id"]?>">Block</a></td>
                     </tr>
                     <?php
                 }
